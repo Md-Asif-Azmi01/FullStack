@@ -21,7 +21,7 @@ const Ragister = () => {
   const handleSubmit = async(e) => {
     e.preventDefault();
     try {
-        const res = await axios.post('http://localhost:3000/api/v1/register', Value);
+        const res = await axios.post('https://fullstack-dhix.onrender.com/api/v1/register', Value);
         alert(res.data.message);   
         navigate('/login');   
     } catch (error) {
