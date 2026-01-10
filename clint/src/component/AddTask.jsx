@@ -26,7 +26,7 @@ const AddTask = () => {
     e.preventDefault();
     console.log('Sending data:', Value);
     try {
-       const res = await axios.post('http://localhost:3000/api/v1/addtask', Value,{
+       const res = await axios.post('https://fullstack-dhix.onrender.com/api/v1/addtask', Value,{
         withCredentials: true
        });
        console.log('Response:', res.data);
