@@ -11,12 +11,7 @@ const taskApi = require('./controller/task')
 // Middleware to parse JSON bodies
 app.use(express.json());
 const port = process.env.PORT || 3000;
-app.use(cors(
-    {
-        origin: ['http://localhost:5173'],
-        credentials: true,
-    }
-));
+app.use(cors());
 app.use(cookieParser());
  
 
