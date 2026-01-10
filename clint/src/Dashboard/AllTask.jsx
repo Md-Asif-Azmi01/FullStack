@@ -15,7 +15,7 @@ const Alltask = () => {
         const fetchUserdata = async() => {
             try {  
                   
-                const res = await axios.get("http://localhost:3000/api/v1/userdetails", {
+                const res = await axios.get("https://fullstack-dhix.onrender.com/api/v1/userdetails", {
                     withCredentials:true
                 });
                 settask(res.data.tasks);
