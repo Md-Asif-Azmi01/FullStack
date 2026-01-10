@@ -21,7 +21,7 @@ const EditTask = () => {
   useEffect(() => {
     const fetchTaskDetail = async () => {
         try {
-            const res = await axios.get(`http://localhost:3000/api/v1/gettask/`+id,{
+            const res = await axios.get(`https://fullstack-dhix.onrender.com/api/v1/gettask/`+id,{
                 withCredentials: true
             });
             console.log(res.data.taskDetails);
@@ -37,7 +37,7 @@ const EditTask = () => {
     e.preventDefault();
     console.log("Sending data:", Value);
     try {
-      const res = await axios.put("http://localhost:3000/api/v1/edittask/"+id, Value,{
+      const res = await axios.put("https://fullstack-dhix.onrender.com/api/v1/edittask/"+id, Value,{
         withCredentials: true
       });
       console.log("Response:", res.data);
@@ -53,7 +53,7 @@ const EditTask = () => {
     e.preventDefault();
     console.log("Deleting task with id:", Value._id);
     try {
-      const res = await axios.delete("http://localhost:3000/api/v1/deletetask/"+Value._id);
+      const res = await axios.delete("https://fullstack-dhix.onrender.com/api/v1/deletetask/"+Value._id);
       console.log("Response:", res.data);
       alert("Task Deleted successfully!");
       Navigate("/home");
