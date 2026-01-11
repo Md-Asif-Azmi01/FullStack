@@ -13,7 +13,7 @@ app.use(express.json());
 const port = process.env.PORT || 3000;
 app.use(cors(
  {
-        origin: ['https://fullstack-clint.onrender.com'],
+        origin: ['https://fullstack-clint.onrender.com'],['http://localhost:5173'],
         credentials: true,
     }
 ));
