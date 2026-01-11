@@ -11,13 +11,16 @@ const taskApi = require('./controller/task')
 // Middleware to parse JSON bodies
 app.use(express.json());
 const port = process.env.PORT || 3000;
+app.use(cookieParser());
+
+const multipleOri = ['https://fullstack-clint.onrender.com', 'http://localhost:5173']
 app.use(cors(
  {
-        origin: ['https://fullstack-clint.onrender.com'],['http://localhost:5173'],
+        origin: multipleOri,
         credentials: true,
     }
 ));
-app.use(cookieParser());
+
  
 
 app.use('/api/v1', userApi);
