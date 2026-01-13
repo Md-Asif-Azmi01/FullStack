@@ -15,7 +15,7 @@ app.use(cookieParser());
 
 app.use(cors(
  {
-        origin: ['https://fullstack-clint.onrender.com'] || ['http://localhost:5173'],
+        origin: ['https://fullstack-clint.onrender.com', 'http://localhost:5173'],
         credentials: true,
     }
 ));
